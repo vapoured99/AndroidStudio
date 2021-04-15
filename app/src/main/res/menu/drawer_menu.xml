@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_fav"
+            android:icon="@drawable/ic_fav_black"
+            android:title="Favourites" />
+
+
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/ic_map_black"
+            android:title="Map" />
+
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_info_black"
+            android:title="About" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="Settings" />
+
+
+    </group>
+
+    <item android:title="Account">
+        <menu>
+            <item
+                android:id="@+id/nav_login"
+                android:icon="@drawable/ic_baseline_login_24"
+                android:title="Login" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_baseline_exit_to_app_24"
+                android:title="Log-Out" />
+
+            <item
+                android:id="@+id/nav_signup"
+                android:icon="@drawable/ic_baseline_supervised_user_circle_24"
+                android:title="Sign-Up" />
+        </menu>
+    </item>
+
+</menu>
