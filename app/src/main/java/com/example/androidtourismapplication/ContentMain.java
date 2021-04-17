@@ -1,26 +1,24 @@
 package com.example.androidtourismapplication;
 
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.view.MenuItem;
-        import android.view.Window;
-        import android.view.WindowManager;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
 
-        import android.os.Bundle;
-        import android.view.MenuItem;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager.widget.ViewPager;
 
-        import androidx.annotation.NonNull;
-        import androidx.appcompat.app.ActionBarDrawerToggle;
-        import androidx.appcompat.app.AppCompatActivity;
-        import androidx.appcompat.widget.Toolbar;
-        import androidx.core.view.GravityCompat;
-        import androidx.drawerlayout.widget.DrawerLayout;
-        import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
 
+public class ContentMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
-
+    private SectionPageAdapter mSectionPageAdapter;
+    private ViewPager mViewPager;
     private DrawerLayout drawer;
 
 
@@ -29,22 +27,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
 
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.content_main);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Explore");
 
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
 
-//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_menu, new HomeFragment()).commit();
+        mSectionPageAdapter = new SectionPageAdapter(getSupportFragmentManager());
+
+        mViewPager = (ViewPager) findViewById(R.id.container);
+        setupViewPager(mViewPager);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
 
 
     }
@@ -53,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-        switch (item.getItemId()) {
+        switch (item.getItemId()){
             case R.id.nav_home:
                 Intent intentH = new Intent(this, MainActivity.class);
                 this.startActivity(intentH);
@@ -66,16 +69,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
 
-
             case R.id.nav_map:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_menu, new MapFragment()).commit();
+                Intent intentM = new Intent(this, MapFragment.class);
+                this.startActivity(intentM);
                 break;
 
 
             case R.id.nav_info:
-                Intent intentI = new Intent(this, Info.class);
+                Intent intentI = new Intent(this,Info.class);
                 this.startActivity(intentI);
                 break;
+
+
 
 
             case R.id.nav_cat:
@@ -109,15 +114,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
-    public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
+    public void onBackPressed(){
+        if(drawer.isDrawerOpen(GravityCompat.START)){
             drawer.closeDrawer(GravityCompat.START);
-        } else {
+        }else{
             super.onBackPressed();
         }
     }
 
 
 
-}
+    private void setupViewPager(ViewPager viewPager){
+        SectionPageAdapter adapter = new SectionPageAdapter(getSupportFragmentManager());
 
+        adapter.addFragment(new BeachFragment(), "Beaches");
+        adapter.addFragment(new NatureFragment(), "Nature");
+        adapter.addFragment(new HistoryFragment(), "History");
+
+        viewPager.setAdapter(adapter);
+
+    }
+
+
+}

@@ -62,6 +62,9 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="locationsettings">Location</string>
+    <string name="favourite_locations">Favourite Locations</string>
+    <string name="is">Immersive Scotland</string>
+
 
 
 </resources>
