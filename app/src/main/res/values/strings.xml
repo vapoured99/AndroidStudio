@@ -52,7 +52,7 @@
     <string name="home">Home</string>
 
     <string name="infotitle">About Immersive Scotland</string>
-    <string name="infotext">Immersive Scotland was created by "Dylan Castle" <br /> <br /> The idea behind this project was to connect and immerse everybody back in to normal life in Scotland, post COVID-19. <br /> <br /> This app will help you discover the best it has to offer from History and Nature all the way to stunning Beaches. This app will cater an experience for everyone throughout the whole country. <br /> <br /> This app will give you more than just a location to visit, it will provide you will knowledge and insight in to the background of all the destinations, and provide you with a virtual guide tour to really enhance your experience with information, pictures, videos and audio clips. <br /> <br /> FEEDBACK &amp; REVIEWS <br /> <br /> For all feedback comments and reviews about the app please forward them to 1704363@rgu.ac.uk</string>
+    <string name="infotext">Immersive Scotland was created by "Dylan Castle". \n \n The idea behind this project was to connect and immerse everybody back in to normal life in Scotland, post COVID-19. \n \n This app will help you discover the best it has to offer from History and Nature all the way to stunning Beaches. This app will cater an experience for everyone throughout the whole country. \n \n This app will give you more than just a location to visit, it will provide you will knowledge and insight in to the background of all the destinations, and provide you with a virtual guide tour to really enhance your experience with information, pictures, videos and audio clips. \n \n FEEDBACK &amp; REVIEWS \n \n For all feedback comments and reviews about the app please forward them to 1704363@rgu.ac.uk</string>
     <string name="delete_account">Delete Account</string>
     <string name="night_mode">Night Mode   </string>
     <string name="notifcations">Notifcations</string>
@@ -64,7 +64,11 @@
     <string name="locationsettings">Location</string>
     <string name="favourite_locations">Favourite Locations</string>
     <string name="is">Immersive Scotland</string>
-
+    <string name="take_a_trip_back_in_time">Take a trip back in time!</string>
+    <string name="explore_the_beaches">Explore The Beaches!</string>
+    <string name="discover_nature_s_beauty">Discover Nature\'s Beauty</string>
+    <string name="dylan_castle">Dylan Castle</string>
+    <string name="_1704363_rgu_ac_uk">1704363@rgu.ac.uk</string>
 
 
 </resources>

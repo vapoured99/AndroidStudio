@@ -5,25 +5,27 @@
     android:layout_gravity="bottom"
     android:background="@drawable/gradient"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="5dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="130dp"
         android:src="@drawable/logo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
-        android:text="Dylan Castle"
+        android:paddingTop="0dp"
+        android:text="@string/dylan_castle"
+        android:textColor="@color/black"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1704363@rgu.ac.uk" />
+        android:text="@string/_1704363_rgu_ac_uk"
+        android:textColor="@color/black"/>
 
 
 </LinearLayout>

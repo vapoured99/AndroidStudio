@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
 
     <TextView
+        android:id="@+id/NF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="Nature Fragment"
-        android:layout_marginTop="40dp"
-        android:id="@+id/NF"/>
+        android:layout_marginTop="5dp"
+        android:text="@string/discover_nature_s_beauty"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
 
-    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp" />
 
 </LinearLayout>

@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.navigation.NavigationView;
@@ -28,6 +30,7 @@ public class ContentMain extends AppCompatActivity implements NavigationView.OnN
 
 
         setContentView(R.layout.content_main);
+
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -50,7 +53,7 @@ public class ContentMain extends AppCompatActivity implements NavigationView.OnN
         tabLayout.setupWithViewPager(mViewPager);
 
 
-    }
+         }
 
 
     @Override
