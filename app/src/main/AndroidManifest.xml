@@ -55,6 +55,35 @@
 <!--        <activity android:name=".MapFragment"-->
 <!--            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>-->
 
+        <activity android:name=".HomeFragment"
+            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
+
+        <activity android:name=".ben"
+            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
+        <activity android:name=".cullen"
+            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
+        <activity android:name=".dun"
+            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
+        <activity android:name=".lin"
+            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
+        <activity android:name=".loch"
+            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
+        <activity android:name=".pap"
+            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
+        <activity android:name=".sbb"
+            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
+        <activity android:name=".smoo"
+            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
+        <activity android:name=".strath"
+            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
+        <activity android:name=".wallace"
+            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
+        <activity android:name=".wsb"
+            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
+        <activity android:name=".lusk"
+            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
+
+
 
 
 

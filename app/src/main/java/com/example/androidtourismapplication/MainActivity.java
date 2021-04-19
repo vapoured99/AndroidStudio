@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         switch (item.getItemId()) {
             case R.id.nav_home:
-                Intent intentH = new Intent(this, MainActivity.class);
+                Intent intentH = new Intent(this, HomeFragment.class);
                 this.startActivity(intentH);
                 break;
 
