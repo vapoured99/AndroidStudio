@@ -71,10 +71,10 @@ public class Info extends AppCompatActivity implements NavigationView.OnNavigati
 
 
 
-            case R.id.nav_cat:
-                Intent intentC = new Intent(this, ContentMain.class);
-                this.startActivity(intentC);
-                break;
+//            case R.id.nav_cat:
+//                Intent intentC = new Intent(this, ContentMain.class);
+//                this.startActivity(intentC);
+//                break;
 
             case R.id.nav_settings:
                 Intent intentS = new Intent(this, Settings.class);

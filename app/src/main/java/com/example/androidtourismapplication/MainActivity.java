@@ -3,25 +3,34 @@ package com.example.androidtourismapplication;
         import android.content.Intent;
         import android.os.Bundle;
         import android.view.MenuItem;
+        import android.view.View;
         import android.view.Window;
         import android.view.WindowManager;
 
         import android.os.Bundle;
         import android.view.MenuItem;
+        import android.widget.ArrayAdapter;
+        import android.widget.GridLayout;
+        import android.widget.Spinner;
+        import android.widget.Toast;
 
         import androidx.annotation.NonNull;
         import androidx.appcompat.app.ActionBarDrawerToggle;
         import androidx.appcompat.app.AppCompatActivity;
         import androidx.appcompat.widget.Toolbar;
+        import androidx.cardview.widget.CardView;
         import androidx.core.view.GravityCompat;
         import androidx.drawerlayout.widget.DrawerLayout;
         import com.google.android.material.navigation.NavigationView;
+
+        import java.lang.reflect.Array;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
     private DrawerLayout drawer;
+    GridLayout gridL;
 
 
     @Override
@@ -30,6 +39,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         setContentView(R.layout.activity_main);
+
+
+        gridL = (GridLayout)findViewById(R.id.gridL);
+
+        setSingleEvent(gridL);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -44,10 +58,83 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
 
-//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_menu, new HomeFragment()).commit();
+//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_menu, new MainActivity()).commit();
 
 
     }
+
+
+
+
+    private void setSingleEvent(GridLayout gridL){
+        for (int i =0; i<gridL.getChildCount(); i++) {
+
+            CardView cardView = (CardView)gridL.getChildAt(i);
+            final int finalI = i;
+
+            cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if (finalI ==0){
+                        Intent intent = new Intent(MainActivity.this, wallace.class);
+                        startActivity(intent);
+                    }
+                    else  if (finalI ==1){
+                        Intent intent = new Intent(MainActivity.this, sbb.class);
+                        startActivity(intent);
+                    }
+                    else if (finalI ==2){
+                        Intent intent = new Intent(MainActivity.this, smoo.class);
+                        startActivity(intent);
+                    }
+                    else if (finalI ==3){
+                        Intent intent = new Intent(MainActivity.this, ben.class);
+                        startActivity(intent);
+                    }
+                    else if (finalI ==4){
+                        Intent intent = new Intent(MainActivity.this, dun.class);
+                        startActivity(intent);
+                    }
+                    else if (finalI ==5){
+                        Intent intent = new Intent(MainActivity.this, lusk.class);
+                        startActivity(intent);
+                    }
+                    else if (finalI ==6){
+                        Intent intent = new Intent(MainActivity.this, pap.class);
+                        startActivity(intent);
+                    }
+                    else if (finalI ==7){
+                        Intent intent = new Intent(MainActivity.this, cullen.class);
+                        startActivity(intent);
+                    }
+                    else if (finalI ==8){
+                        Intent intent = new Intent(MainActivity.this, loch.class);
+                        startActivity(intent);
+                    }
+                    else if (finalI ==9){
+                        Intent intent = new Intent(MainActivity.this, strath.class);
+                        startActivity(intent);
+                    }
+                    else if (finalI ==10){
+                        Intent intent = new Intent(MainActivity.this, wsb.class);
+                        startActivity(intent);
+                    }
+                    else if (finalI ==11){
+                        Intent intent = new Intent(MainActivity.this, lin.class);
+                        startActivity(intent);
+                    }
+                    else {
+                        Toast.makeText(MainActivity.this, "please set an activity for this card", Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+
+        }
+    }
+
+
+
 
 
     @Override
@@ -55,7 +142,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         switch (item.getItemId()) {
             case R.id.nav_home:
-                Intent intentH = new Intent(this, HomeFragment.class);
+                Intent intentH = new Intent(this, MainActivity.class);
                 this.startActivity(intentH);
                 break;
 

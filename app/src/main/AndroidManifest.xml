@@ -25,7 +25,6 @@
             android:theme="@style/Theme.AndroidTourismApplication.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -41,9 +40,6 @@
             android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
 
         <activity android:name=".Settings"
-            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
-
-        <activity android:name=".ContentMain"
             android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
 
         <activity android:name=".Info"
@@ -81,6 +77,8 @@
         <activity android:name=".wsb"
             android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
         <activity android:name=".lusk"
+            android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
+        <activity android:name=".ContentMain"
             android:theme="@style/Theme.AndroidTourismApplication.NoActionBar"/>
 
 
