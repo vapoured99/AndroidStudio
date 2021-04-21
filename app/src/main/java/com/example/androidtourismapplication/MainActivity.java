@@ -155,7 +155,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
             case R.id.nav_map:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_menu, new MapFragment()).commit();
+                Intent intentM = new Intent(this, MapsActivity.class);
+                this.startActivity(intentM);
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_menu, new MapFragment()).commit();
                 break;
 
 

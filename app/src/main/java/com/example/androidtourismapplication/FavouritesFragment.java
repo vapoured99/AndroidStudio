@@ -35,7 +35,7 @@ public class FavouritesFragment extends AppCompatActivity implements NavigationV
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Favourite Location");
+        getSupportActionBar().setTitle("Favourite Locations");
 
 
 

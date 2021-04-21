@@ -27,22 +27,211 @@
         </androidx.appcompat.widget.Toolbar>
 
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/toolbar"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="17dp"
-            android:text="@string/favourites_fragment"
-            android:textColor="@color/black"
-            android:textSize="22sp" />
-
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/container"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:background="@drawable/gradient"
+            >
+
+
+
+            <!--    <androidx.recyclerview.widget.RecyclerView-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="match_parent"-->
+            <!--        android:id="@+id/recycler_view"-->
+            <!--        android:layout_marginTop="10dp"/>-->
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:background="@drawable/itembg">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitCenter"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:id="@+id/itemImage1"
+                    android:src="@drawable/lin"
+                    android:onClick="onClick"/>
+
+                <!--    android:scaleType="fitCenter"-->
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/itemText"
+                    android:text="Linlithgow Castle"
+                    android:textSize="22sp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:layout_margin="16dp"/>
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="75dp"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_fav_black"
+                    android:text="View"
+                    android:id="@+id/button1"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:background="@drawable/itembg">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitCenter"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:id="@+id/itemImage2"
+                    android:background="@drawable/lochness"
+                    android:onClick="onClick"/>
+
+                <!--    android:scaleType="fitCenter"-->
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/itemText2"
+                    android:text="Loch Ness"
+                    android:textSize="22sp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:layout_margin="16dp"/>
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="75dp"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_fav_black"
+                    android:text="View"
+                    android:id="@+id/button2"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:background="@drawable/itembg">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitCenter"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:id="@+id/itemImage3"
+                    android:background="@drawable/wallace"
+                    android:onClick="onClick"/>
+
+                <!--    android:scaleType="fitCenter"-->
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/itemText3"
+                    android:text="Wallace Monument"
+                    android:textSize="22sp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:layout_margin="16dp"/>
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="75dp"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_fav_black"
+                    android:id="@+id/button3"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:background="@drawable/itembg">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitCenter"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:id="@+id/itemImage4"
+                    android:background="@drawable/luskentyre"/>
+
+                <!--    android:scaleType="fitCenter"-->
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/itemText4"
+                    android:text="Luskentyre Beach"
+                    android:textSize="22sp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:layout_margin="16dp"
+                    android:onClick="onClick"/>
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="75dp"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_fav_black"
+                    android:text="View"
+                    android:id="@+id/button4"
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+<!--        <androidx.viewpager.widget.ViewPager-->
+<!--            android:id="@+id/container"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
 
 
     </LinearLayout>
