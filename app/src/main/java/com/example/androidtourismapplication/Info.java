@@ -7,11 +7,13 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class Info extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -21,6 +23,13 @@ public class Info extends AppCompatActivity implements NavigationView.OnNavigati
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
+            setTheme(R.style.DarkTheme);
+        }else{
+            setTheme(R.style.LightTheme);
+        }
+
 
 
         setContentView(R.layout.info);
@@ -99,6 +108,12 @@ public class Info extends AppCompatActivity implements NavigationView.OnNavigati
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void logout (MenuItem item){
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(), login.class));
+        finish();
     }
 
     @Override

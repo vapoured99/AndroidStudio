@@ -11,25 +11,38 @@
 
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/email"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="24dp"
-        android:autofillHints="Username"
+        android:autofillHints="Email"
         android:background="#11000000"
         android:drawableStart="@drawable/ic_stat_username"
         android:drawablePadding="10dp"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/username"
+        android:textColorHint="@color/black"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="80dp"
+        android:text="Forgot Password?"
+        android:textColor="#0000EE"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/password"
@@ -43,12 +56,12 @@
         android:drawablePadding="10dp"
         android:drawableStart="@drawable/ic_stat_password"
         android:ems="10"
+        android:textColorHint="@color/black"
         android:textSize="22sp"
         android:inputType="textPassword"
-        android:text="@string/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
 
     <TextView
@@ -104,8 +117,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

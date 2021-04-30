@@ -12,12 +12,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class FavouritesFragment extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -30,7 +32,11 @@ public class FavouritesFragment extends AppCompatActivity implements NavigationV
 
         setContentView(R.layout.fragment_favourites);
 
-
+        if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
+            setTheme(R.style.DarkTheme);
+        }else{
+            setTheme(R.style.LightTheme);
+        }
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -69,7 +75,7 @@ public class FavouritesFragment extends AppCompatActivity implements NavigationV
 
 
             case R.id.nav_map:
-                Intent intentM = new Intent(this, MapFragment.class);
+                Intent intentM = new Intent(this, MapsActivity.class);
                 this.startActivity(intentM);
                 break;
 
@@ -82,10 +88,10 @@ public class FavouritesFragment extends AppCompatActivity implements NavigationV
 
 
 
-//            case R.id.nav_cat:
-//                Intent intentC = new Intent(this, ContentMain.class);
-//                this.startActivity(intentC);
-//                break;
+            case R.id.nav_cat:
+                Intent intentC = new Intent(this, ContentMain.class);
+                this.startActivity(intentC);
+                break;
 
             case R.id.nav_settings:
                 Intent intentS = new Intent(this, Settings.class);
@@ -110,6 +116,13 @@ public class FavouritesFragment extends AppCompatActivity implements NavigationV
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    public void logout (MenuItem item){
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(), login.class));
+        finish();
     }
 
     @Override

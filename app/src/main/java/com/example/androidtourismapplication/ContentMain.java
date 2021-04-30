@@ -8,6 +8,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -17,6 +18,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class ContentMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -33,7 +35,11 @@ public class ContentMain extends AppCompatActivity implements NavigationView.OnN
         setContentView(R.layout.content_main);
 
 
-
+        if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
+            setTheme(R.style.DarkTheme);
+        }else{
+            setTheme(R.style.LightTheme);
+        }
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -59,6 +65,13 @@ public class ContentMain extends AppCompatActivity implements NavigationView.OnN
 
          }
 
+    public void logout (MenuItem item){
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(), login.class));
+        finish();
+    }
+
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -77,7 +90,7 @@ public class ContentMain extends AppCompatActivity implements NavigationView.OnN
 
 
             case R.id.nav_map:
-                Intent intentM = new Intent(this, MapFragment.class);
+                Intent intentM = new Intent(this, MapsActivity.class);
                 this.startActivity(intentM);
                 break;
 

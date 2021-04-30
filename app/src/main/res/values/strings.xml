@@ -84,6 +84,8 @@
     <string name="sign_up">Sign-Up</string>
     <string name="location1">Location</string>
     <string name="todo">TODO</string>
+    <string name="dunnottar_castle">Dunnottar Castle</string>
+    <string name="prince_alberts_pyramid">Prince Alberts Pyramid</string>
 
     <string-array name="programming_languages">
         <item>Cullen</item>

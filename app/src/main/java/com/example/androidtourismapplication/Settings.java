@@ -7,17 +7,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 //public class Settings extends Fragment {
 //
@@ -36,13 +40,42 @@ import com.google.android.material.navigation.NavigationView;
 public class Settings extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
+    Switch nightMode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
+            setTheme(R.style.DarkTheme);
+        }else{
+            setTheme(R.style.LightTheme);
+        }
+
         super.onCreate(savedInstanceState);
 
 
         setContentView(R.layout.settings);
+
+        nightMode = findViewById(R.id.nightmode);
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
+            nightMode.setChecked(true);
+        }
+
+       nightMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+           @Override
+           public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+               if (isChecked){
+                   AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                   restartActivity();
+               }else{
+                   AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+               }
+           }
+
+
+       });
+
+
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -121,6 +154,12 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
         return true;
     }
 
+    public void logout (MenuItem item){
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(), login.class));
+        finish();
+    }
+
     @Override
     public void onBackPressed(){
         if(drawer.isDrawerOpen(GravityCompat.START)){
@@ -130,6 +169,11 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
         }
     }
 
+    private void restartActivity() {
+        Intent i = new Intent(getApplicationContext(), Settings.class);
+        startActivity(i);
+        finish();
+    }
 
 
 }

@@ -10,23 +10,31 @@ package com.example.androidtourismapplication;
         import android.os.Bundle;
         import android.view.MenuItem;
         import android.widget.ArrayAdapter;
+        import android.widget.CompoundButton;
         import android.widget.GridLayout;
         import android.widget.Spinner;
+        import android.widget.Switch;
         import android.widget.Toast;
 
         import androidx.annotation.NonNull;
+        import androidx.appcompat.app.ActionBar;
         import androidx.appcompat.app.ActionBarDrawerToggle;
         import androidx.appcompat.app.AppCompatActivity;
+        import androidx.appcompat.app.AppCompatDelegate;
         import androidx.appcompat.widget.Toolbar;
         import androidx.cardview.widget.CardView;
         import androidx.core.view.GravityCompat;
         import androidx.drawerlayout.widget.DrawerLayout;
         import com.google.android.material.navigation.NavigationView;
+        import com.google.firebase.auth.FirebaseAuth;
 
         import java.lang.reflect.Array;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+
+
 
 
     private DrawerLayout drawer;
@@ -37,8 +45,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
+            setTheme(R.style.DarkTheme);
+        }else{
+            setTheme(R.style.LightTheme);
+        }
+
 
         setContentView(R.layout.activity_main);
+
 
 
         gridL = (GridLayout)findViewById(R.id.gridL);
@@ -57,10 +72,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_menu, new MainActivity()).commit();
 
-//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_menu, new MainActivity()).commit();
 
+    }
 
+    public void logout (MenuItem item){
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(), login.class));
+        finish();
     }
 
 
@@ -136,7 +156,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
@@ -205,8 +224,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
-
-
 
 }
 
