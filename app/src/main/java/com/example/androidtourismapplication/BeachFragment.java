@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -21,10 +22,9 @@ import java.util.List;
 public class BeachFragment extends Fragment {
 
 
-    View v;
+    View view;
 
-//    private  RecyclerView myrecyclerview;
-//    private List<OurData> ourDataList;
+
 
     public BeachFragment() {
 
@@ -36,10 +36,14 @@ public class BeachFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_beach, container, false);
-        Button btn = (Button)view.findViewById(R.id.button1);
-        Button btn2 = (Button)view.findViewById(R.id.button2);
-        Button btn3 = (Button)view.findViewById(R.id.button3);
-        Button btn4 = (Button)view.findViewById(R.id.button4);
+
+        LinearLayout btn = (LinearLayout) view.findViewById(R.id.lay1);
+        LinearLayout btn2 = (LinearLayout) view.findViewById(R.id.lay2);
+        LinearLayout btn3 = (LinearLayout) view.findViewById(R.id.lay3);
+        LinearLayout btn4 = (LinearLayout) view.findViewById(R.id.lay4);
+
+
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

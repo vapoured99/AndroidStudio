@@ -13,4 +13,5 @@
     <color name="color4">#59717c</color>
     <color name="red">#ff0000</color>
     <color name="itembg">#F8F8FF</color>
+    <color name="attr">?attr/backgroundColor</color>
 </resources>

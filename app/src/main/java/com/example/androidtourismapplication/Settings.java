@@ -125,7 +125,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
 
 
             case R.id.nav_cat:
-                Intent intentC = new Intent(this, MainActivity.class);
+                Intent intentC = new Intent(this, ContentMain.class);
                 this.startActivity(intentC);
                 break;
 

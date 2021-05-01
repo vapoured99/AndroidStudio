@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/day_mode"
     android:fitsSystemWindows="true">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -26,54 +27,52 @@
         </androidx.appcompat.widget.Toolbar>
 
 
+
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:background="@drawable/gradient"
-            >
-
-
+            android:orientation="vertical"
+            android:padding="2dp">
 
             <!--    <androidx.recyclerview.widget.RecyclerView-->
+            <!--        android:id="@+id/recycler_view"-->
             <!--        android:layout_width="match_parent"-->
             <!--        android:layout_height="match_parent"-->
-            <!--        android:id="@+id/recycler_view"-->
-            <!--        android:layout_marginTop="10dp"/>-->
+            <!--        android:layout_marginTop="10dp" />-->
 
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
+                android:id="@+id/lay9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/itembg2"
                 android:orientation="horizontal"
                 android:paddingStart="5dp"
-                android:paddingEnd="5dp"
-                android:background="@drawable/itembg">
+                android:paddingEnd="5dp">
 
                 <ImageView
+                    android:id="@+id/itemImage1"
                     android:layout_width="80dp"
                     android:layout_height="100dp"
-                    android:scaleType="fitCenter"
                     android:layout_margin="8dp"
                     android:layout_weight="1"
-                    android:id="@+id/itemImage1"
-                    android:src="@drawable/lin"
-                    android:onClick="onClick"/>
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lin" />
 
                 <!--    android:scaleType="fitCenter"-->
 
 
                 <TextView
+                    android:id="@+id/itemText"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/itemText"
-                    android:text="Linlithgow Castle"
-                    android:textSize="22sp"
-                    android:gravity="center_vertical"
+                    android:layout_margin="16dp"
                     android:layout_weight="3"
-                    android:layout_margin="16dp"/>
+                    android:gravity="center_vertical"
+                    android:text="@string/linlithgow_palace"
+                    android:textSize="22sp" />
 
                 <ImageView
                     android:layout_width="42dp"
@@ -87,36 +86,79 @@
 
             </LinearLayout>
 
+<!--            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                android:id="@+id/lay10"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/itembg2"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingStart="5dp"-->
+<!--                android:paddingEnd="5dp">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/itemImage2"-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/smoo"-->
+<!--                    android:scaleType="fitCenter" />-->
+
+<!--                &lt;!&ndash;    android:scaleType="fitCenter"&ndash;&gt;-->
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/itemText2"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_margin="16dp"-->
+<!--                    android:layout_weight="3"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:text="Smoo Cave"-->
+<!--                    android:textSize="22sp" />-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="42dp"-->
+<!--                    android:layout_height="75dp"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:src="@drawable/ic_fav_red"-->
+<!--                    android:text="View"-->
+<!--                    android:id="@+id/button2"-->
+<!--                    />-->
+
+<!--            </LinearLayout>-->
+
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/lay11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/itembg2"
                 android:orientation="horizontal"
                 android:paddingStart="5dp"
-                android:paddingEnd="5dp"
-                android:background="@drawable/itembg">
+                android:paddingEnd="5dp">
 
                 <ImageView
+                    android:id="@+id/itemImage3"
                     android:layout_width="80dp"
                     android:layout_height="100dp"
-                    android:scaleType="fitCenter"
                     android:layout_margin="8dp"
                     android:layout_weight="1"
-                    android:id="@+id/itemImage2"
                     android:background="@drawable/lochness"
-                    android:onClick="onClick"/>
+                    android:scaleType="fitCenter" />
 
                 <!--    android:scaleType="fitCenter"-->
 
 
                 <TextView
+                    android:id="@+id/itemText3"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/itemText2"
-                    android:text="Loch Ness"
-                    android:textSize="22sp"
-                    android:gravity="center_vertical"
+                    android:layout_margin="16dp"
                     android:layout_weight="3"
-                    android:layout_margin="16dp"/>
+                    android:gravity="center_vertical"
+                    android:text="Loch Ness"
+                    android:textSize="22sp" />
 
                 <ImageView
                     android:layout_width="42dp"
@@ -125,83 +167,41 @@
                     android:layout_gravity="center"
                     android:src="@drawable/ic_fav_red"
                     android:text="View"
-                    android:id="@+id/button2"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingStart="5dp"
-                android:paddingEnd="5dp"
-                android:background="@drawable/itembg">
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:scaleType="fitCenter"
-                    android:layout_margin="8dp"
-                    android:layout_weight="1"
-                    android:id="@+id/itemImage3"
-                    android:background="@drawable/wallace"
-                    android:onClick="onClick"/>
-
-                <!--    android:scaleType="fitCenter"-->
-
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/itemText3"
-                    android:text="Wallace Monument"
-                    android:textSize="22sp"
-                    android:gravity="center_vertical"
-                    android:layout_weight="3"
-                    android:layout_margin="16dp"/>
-
-                <ImageView
-                    android:layout_width="42dp"
-                    android:layout_height="75dp"
-                    android:textSize="12sp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_fav_red"
                     android:id="@+id/button3"
                     />
 
             </LinearLayout>
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/lay12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/itembg2"
                 android:orientation="horizontal"
                 android:paddingStart="5dp"
-                android:paddingEnd="5dp"
-                android:background="@drawable/itembg">
+                android:paddingEnd="5dp">
 
                 <ImageView
+                    android:id="@+id/itemImage4"
                     android:layout_width="80dp"
                     android:layout_height="100dp"
-                    android:scaleType="fitCenter"
                     android:layout_margin="8dp"
                     android:layout_weight="1"
-                    android:id="@+id/itemImage4"
-                    android:background="@drawable/luskentyre"/>
+                    android:background="@drawable/bennevis2"
+                    android:scaleType="fitCenter" />
 
                 <!--    android:scaleType="fitCenter"-->
 
 
                 <TextView
+                    android:id="@+id/itemText4"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/itemText4"
-                    android:text="Luskentyre Beach"
-                    android:textSize="22sp"
-                    android:gravity="center_vertical"
-                    android:layout_weight="3"
                     android:layout_margin="16dp"
-                    android:onClick="onClick"/>
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:text="Ben Nevis Mountain"
+                    android:textSize="22sp" />
 
                 <ImageView
                     android:layout_width="42dp"
@@ -214,26 +214,11 @@
                     />
 
             </LinearLayout>
-
-
-
-
-
-
-
-
-
-
         </LinearLayout>
 
-
-<!--        <androidx.viewpager.widget.ViewPager-->
-<!--            android:id="@+id/container"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent" />-->
-
-
     </LinearLayout>
+
+
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -246,6 +231,24 @@
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

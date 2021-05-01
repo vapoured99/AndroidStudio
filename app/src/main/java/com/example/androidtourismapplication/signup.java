@@ -1,5 +1,6 @@
 package com.example.androidtourismapplication;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -27,10 +28,13 @@ public class signup extends AppCompatActivity {
     EditText mEmail, mPassword;
     Button mButtonSU;
     FirebaseAuth fAuth;
-    ProgressBar progressBar;
+
 
     TextView textView2;
     TextView textView4;
+
+    private Button buttonSU;
+    private ProgressDialog LoadingBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,12 @@ public class signup extends AppCompatActivity {
 
 
         setContentView(R.layout.signup);
+
+        LoadingBar = new ProgressDialog(this);
+
+
+
+
 
         mEmail = findViewById(R.id.email);
         mPassword = findViewById(R.id.password);
@@ -54,6 +64,8 @@ public class signup extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
         }
+
+
 
 
 
@@ -77,6 +89,11 @@ public class signup extends AppCompatActivity {
                     mPassword.setError(("Password must contain more than 6 characters."));
                     return;
                 }
+
+                LoadingBar.setTitle("Welcome");
+                LoadingBar.setMessage("Please wait whilst we create your account!");
+                LoadingBar.setCanceledOnTouchOutside(false);
+                LoadingBar.show();
 
 //                progressBar.setVisibility(View.VISIBLE);
 

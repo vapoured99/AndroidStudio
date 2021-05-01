@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -33,15 +34,15 @@ public class NatureFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_nature, container, false);
 
+        LinearLayout btn = (LinearLayout) view.findViewById(R.id.lay9);
+        LinearLayout btn2 = (LinearLayout) view.findViewById(R.id.lay10);
+        LinearLayout btn3 = (LinearLayout) view.findViewById(R.id.lay11);
+        LinearLayout btn4 = (LinearLayout) view.findViewById(R.id.lay12);
 
-        Button btn = (Button)view.findViewById(R.id.button1);
-        Button btn2 = (Button)view.findViewById(R.id.button2);
-        Button btn3 = (Button)view.findViewById(R.id.button3);
-        Button btn4 = (Button)view.findViewById(R.id.button4);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), cullen.class);
+                Intent intent = new Intent(getActivity(), strath.class);
                 startActivity(intent);
             }
         });
@@ -49,7 +50,7 @@ public class NatureFragment extends Fragment {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), sbb.class);
+                Intent intent = new Intent(getActivity(), smoo.class);
                 startActivity(intent);
             }
         });
@@ -58,7 +59,7 @@ public class NatureFragment extends Fragment {
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), wsb.class);
+                Intent intent = new Intent(getActivity(), loch.class);
                 startActivity(intent);
             }
         });
@@ -66,7 +67,7 @@ public class NatureFragment extends Fragment {
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), lusk.class);
+                Intent intent = new Intent(getActivity(), ben.class);
                 startActivity(intent);
             }
         });

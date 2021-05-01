@@ -31,18 +31,19 @@
         android:orientation="horizontal"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
+        android:id="@+id/lay1"
         android:background="@drawable/itembg">
 
         <ImageView
-            android:layout_width="80dp"
+            android:layout_width="120dp"
             android:layout_height="100dp"
             android:scaleType="fitCenter"
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:id="@+id/itemImage1"
             android:src="@drawable/cullen"
-            android:onClick="onClick"/>
-
+            />
+<!--        android:onClick="onClick"-->
         <!--    android:scaleType="fitCenter"-->
 
 
@@ -56,15 +57,15 @@
             android:layout_weight="3"
             android:layout_margin="16dp"/>
 
-        <Button
-            android:layout_width="42dp"
-            android:layout_height="75dp"
-            android:textSize="12sp"
-            android:layout_gravity="center"
-            android:background="@color/color1"
-            android:text="View"
-            android:id="@+id/button1"
-            />
+<!--        <Button-->
+<!--            android:layout_width="42dp"-->
+<!--            android:layout_height="75dp"-->
+<!--            android:textSize="12sp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@color/color1"-->
+<!--            android:text="View"-->
+<!--            android:id="@+id/button1"-->
+<!--            />-->
 
     </LinearLayout>
 
@@ -72,19 +73,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:id="@+id/lay2"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
         android:background="@drawable/itembg">
 
         <ImageView
-            android:layout_width="80dp"
+            android:layout_width="120dp"
             android:layout_height="100dp"
             android:scaleType="fitCenter"
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:id="@+id/itemImage2"
             android:background="@drawable/sandwoodbb"
-            android:onClick="onClick"/>
+            />
 
         <!--    android:scaleType="fitCenter"-->
 
@@ -99,14 +101,14 @@
             android:layout_weight="3"
             android:layout_margin="16dp"/>
 
-        <Button
-            android:layout_width="42dp"
-            android:layout_height="75dp"
-            android:textSize="12sp"
-        android:layout_gravity="center"
-        android:background="@color/color1"
-        android:text="View"
-        android:id="@+id/button2"/>
+<!--        <Button-->
+<!--            android:layout_width="42dp"-->
+<!--            android:layout_height="75dp"-->
+<!--            android:textSize="12sp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:background="@color/color1"-->
+<!--        android:text="View"-->
+<!--        android:id="@+id/button2"/>-->
 
     </LinearLayout>
 
@@ -114,19 +116,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:id="@+id/lay3"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
         android:background="@drawable/itembg">
 
         <ImageView
-            android:layout_width="80dp"
+            android:layout_width="120dp"
             android:layout_height="100dp"
             android:scaleType="fitCenter"
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:id="@+id/itemImage3"
             android:background="@drawable/westsands"
-            android:onClick="onClick"/>
+            />
 
         <!--    android:scaleType="fitCenter"-->
 
@@ -141,14 +144,14 @@
             android:layout_weight="3"
             android:layout_margin="16dp"/>
 
-        <Button
-            android:layout_width="42dp"
-            android:layout_height="75dp"
-            android:textSize="12sp"
-            android:layout_gravity="center"
-            android:background="@color/color1"
-            android:text="View"
-            android:id="@+id/button3"/>
+<!--        <Button-->
+<!--            android:layout_width="42dp"-->
+<!--            android:layout_height="75dp"-->
+<!--            android:textSize="12sp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@color/color1"-->
+<!--            android:text="View"-->
+<!--            android:id="@+id/button3"/>-->
 
     </LinearLayout>
 
@@ -158,10 +161,11 @@
         android:orientation="horizontal"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
+        android:id="@+id/lay4"
         android:background="@drawable/itembg">
 
         <ImageView
-            android:layout_width="80dp"
+            android:layout_width="120dp"
             android:layout_height="100dp"
             android:scaleType="fitCenter"
             android:layout_margin="8dp"
@@ -181,16 +185,16 @@
             android:gravity="center_vertical"
             android:layout_weight="3"
             android:layout_margin="16dp"
-            android:onClick="onClick"/>
+            />
 
-        <Button
-            android:layout_width="42dp"
-            android:layout_height="75dp"
-            android:textSize="12sp"
-            android:layout_gravity="center"
-            android:background="@color/color1"
-            android:text="View"
-            android:id="@+id/button4"/>
+<!--        <Button-->
+<!--            android:layout_width="42dp"-->
+<!--            android:layout_height="75dp"-->
+<!--            android:textSize="12sp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@color/color1"-->
+<!--            android:text="View"-->
+<!--            android:id="@+id/button4"/>-->
 
     </LinearLayout>
 
