@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="176dp"
     android:layout_gravity="bottom"
-    android:background="@drawable/gradient"
+    android:background="#add8e6"
     android:orientation="vertical"
     android:padding="5dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
@@ -13,19 +13,15 @@
         android:layout_height="130dp"
         android:src="@drawable/logo" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="0dp"
-        android:text="@string/dylan_castle"
-        android:textColor="@color/black"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
 
     <TextView
         android:layout_width="wrap_content"
+        android:id="@+id/pemail"
         android:layout_height="wrap_content"
-        android:text="@string/_1704363_rgu_ac_uk"
-        android:textColor="@color/black"/>
+        android:text=""
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
 
 </LinearLayout>

@@ -1,13 +1,20 @@
 package com.example.androidtourismapplication;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -19,6 +26,10 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Info extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
+    AlertDialog alertDialog1;
+    Switch font;
+    TextView textView;
+    CharSequence[] values = {"12sp", "14sp", "22sp"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +57,15 @@ public class Info extends AppCompatActivity implements NavigationView.OnNavigati
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        font = findViewById(R.id.font);
+        font.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CreateAlertDialogWithSwitchButton();
+            }
+        });
+
 
 
     }
@@ -126,5 +146,33 @@ public class Info extends AppCompatActivity implements NavigationView.OnNavigati
     }
 
 
+    public void CreateAlertDialogWithSwitchButton() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Info.this);
+        builder.setTitle("Select your text size");
+        textView = (TextView) findViewById(R.id.desc);
+        builder.setSingleChoiceItems(values, -1, new DialogInterface.OnClickListener() {
 
+            @Override
+            public void onClick(DialogInterface dialog, int item) {
+
+                switch (item) {
+                    case 0:
+                        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
+                        break;
+                    case 1:
+                        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+                        break;
+                    case 2:
+                        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 22);
+                        break;
+                }
+                alertDialog1.dismiss();
+            }
+        });
+
+        alertDialog1 = builder.create();
+        alertDialog1.show();
+
+    }
 }
+

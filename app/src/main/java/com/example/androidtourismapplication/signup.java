@@ -34,7 +34,7 @@ public class signup extends AppCompatActivity {
     TextView textView4;
 
     private Button buttonSU;
-    private ProgressDialog LoadingBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ public class signup extends AppCompatActivity {
 
         setContentView(R.layout.signup);
 
-        LoadingBar = new ProgressDialog(this);
+
 
 
 
@@ -90,10 +90,7 @@ public class signup extends AppCompatActivity {
                     return;
                 }
 
-                LoadingBar.setTitle("Welcome");
-                LoadingBar.setMessage("Please wait whilst we create your account!");
-                LoadingBar.setCanceledOnTouchOutside(false);
-                LoadingBar.show();
+
 
 //                progressBar.setVisibility(View.VISIBLE);
 

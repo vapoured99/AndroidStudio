@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loginimage"
+    android:background="@drawable/lsbg"
     tools:ignore="labelFor">
 
 
@@ -71,7 +71,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginBottom="40dp"
         android:text="@string/Login2"
-        android:textColor="#0000EE"
+        android:textColor="#add8e6"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -92,6 +92,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password2" />
 
+
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -99,7 +101,7 @@
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="40dp"
         android:text="@string/skip"
-        android:textColor="#0000EE"
+        android:textColor="#add8e6"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -107,8 +109,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="307dp"
-        android:layout_height="243dp"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
         android:layout_marginStart="56dp"
         android:layout_marginEnd="56dp"
         android:contentDescription="@string/logo"
@@ -117,6 +119,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
