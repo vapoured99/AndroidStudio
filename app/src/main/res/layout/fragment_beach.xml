@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:padding="10dp"
-    android:background="?attr/backgroundColor"
-    >
+    android:background="?attr/backgroundColor">
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,8 +24,7 @@
 <!--        android:id="@+id/recycler_view"-->
 <!--        android:layout_marginTop="10dp"/>-->
 
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -44,8 +42,7 @@
             android:id="@+id/itemImage1"
             android:src="@drawable/cullen"
             />
-<!--        android:onClick="onClick"-->
-        <!--    android:scaleType="fitCenter"-->
+
 
 
         <TextView
@@ -58,19 +55,10 @@
             android:layout_weight="3"
             android:layout_margin="16dp"/>
 
-<!--        <Button-->
-<!--            android:layout_width="42dp"-->
-<!--            android:layout_height="75dp"-->
-<!--            android:textSize="12sp"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:background="@color/color1"-->
-<!--            android:text="View"-->
-<!--            android:id="@+id/button1"-->
-<!--            />-->
 
     </LinearLayout>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -89,7 +77,6 @@
             android:background="@drawable/sandwoodbb"
             />
 
-        <!--    android:scaleType="fitCenter"-->
 
 
         <TextView
@@ -102,18 +89,9 @@
             android:layout_weight="3"
             android:layout_margin="16dp"/>
 
-<!--        <Button-->
-<!--            android:layout_width="42dp"-->
-<!--            android:layout_height="75dp"-->
-<!--            android:textSize="12sp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:background="@color/color1"-->
-<!--        android:text="View"-->
-<!--        android:id="@+id/button2"/>-->
-
     </LinearLayout>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -132,8 +110,6 @@
             android:background="@drawable/westsands"
             />
 
-        <!--    android:scaleType="fitCenter"-->
-
 
         <TextView
             android:layout_width="0dp"
@@ -145,18 +121,11 @@
             android:layout_weight="3"
             android:layout_margin="16dp"/>
 
-<!--        <Button-->
-<!--            android:layout_width="42dp"-->
-<!--            android:layout_height="75dp"-->
-<!--            android:textSize="12sp"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:background="@color/color1"-->
-<!--            android:text="View"-->
-<!--            android:id="@+id/button3"/>-->
+
 
     </LinearLayout>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -174,7 +143,6 @@
             android:id="@+id/itemImage4"
             android:background="@drawable/luskentyre"/>
 
-        <!--    android:scaleType="fitCenter"-->
 
 
         <TextView
@@ -188,25 +156,9 @@
             android:layout_margin="16dp"
             />
 
-<!--        <Button-->
-<!--            android:layout_width="42dp"-->
-<!--            android:layout_height="75dp"-->
-<!--            android:textSize="12sp"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:background="@color/color1"-->
-<!--            android:text="View"-->
-<!--            android:id="@+id/button4"/>-->
+
 
     </LinearLayout>
-
-
-
-
-
-
-
-
-
 
 </LinearLayout>
 

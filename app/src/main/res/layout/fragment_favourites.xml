@@ -35,7 +35,8 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="2dp">
+            android:padding="2dp"
+            android:background="#add8e6">
 
             <!--    <androidx.recyclerview.widget.RecyclerView-->
             <!--        android:id="@+id/recycler_view"-->
@@ -88,50 +89,8 @@
 
             </LinearLayout>
 
-<!--            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--                android:id="@+id/lay10"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@drawable/itembg2"-->
-<!--                android:orientation="horizontal"-->
-<!--                android:paddingStart="5dp"-->
-<!--                android:paddingEnd="5dp">-->
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/itemImage2"-->
-<!--                    android:layout_width="80dp"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:layout_margin="8dp"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:background="@drawable/smoo"-->
-<!--                    android:scaleType="fitCenter" />-->
-
-<!--                &lt;!&ndash;    android:scaleType="fitCenter"&ndash;&gt;-->
-
-
-<!--                <TextView-->
-<!--                    android:id="@+id/itemText2"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:layout_margin="16dp"-->
-<!--                    android:layout_weight="3"-->
-<!--                    android:gravity="center_vertical"-->
-<!--                    android:text="Smoo Cave"-->
-<!--                    android:textSize="22sp" />-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="42dp"-->
-<!--                    android:layout_height="75dp"-->
-<!--                    android:textSize="12sp"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:src="@drawable/ic_fav_red"-->
-<!--                    android:text="View"-->
-<!--                    android:id="@+id/button2"-->
-<!--                    />-->
-
-<!--            </LinearLayout>-->
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:id="@+id/lay11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -160,7 +119,7 @@
                     android:textColor="@color/black"
                     android:layout_weight="3"
                     android:gravity="center_vertical"
-                    android:text="Loch Ness"
+                    android:text="@string/loch_ness"
                     android:textSize="22sp" />
 
                 <ImageView
@@ -169,13 +128,13 @@
                     android:textSize="12sp"
                     android:layout_gravity="center"
                     android:src="@drawable/ic_fav_red"
-                    android:text="View"
+                    android:text="@string/view"
                     android:id="@+id/button3"
                     />
 
             </LinearLayout>
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout
                 android:id="@+id/lay12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

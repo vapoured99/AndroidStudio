@@ -54,9 +54,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="?attr/backgroundColor">
-
+                        android:background="?attr/backgroundColor"
+                        android:orientation="vertical">
 
 
                         <ImageView
@@ -71,18 +70,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:paddingStart="30dp"
-                            android:text="@string/william_wallace_monument"
-                             />
+                            android:text="@string/william_wallace_monument" />
 
 
                         <ImageView
+                            android:id="@+id/button1"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_fav_black"
-                            android:id="@+id/button1"
-                            />
-
+                            android:src="@drawable/ic_fav_black" />
 
 
                     </LinearLayout>
@@ -107,8 +103,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="?attr/backgroundColor">
+                        android:background="?attr/backgroundColor"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="200dp"
@@ -120,16 +116,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
-                            android:text="@string/bennevis"
-                            />
+                            android:text="@string/bennevis" />
 
                         <ImageView
+                            android:id="@+id/button2"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_fav_red"
-                            android:id="@+id/button2"
-                            />
+                            android:src="@drawable/ic_fav_red" />
 
                     </LinearLayout>
 
@@ -153,8 +147,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="?attr/backgroundColor">
+                        android:background="?attr/backgroundColor"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="200dp"
@@ -166,16 +160,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
-                            android:text="@string/cullen"
-                             />
+                            android:text="@string/cullen" />
 
                         <ImageView
+                            android:id="@+id/button3"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_fav_black"
-                            android:id="@+id/button3"
-                            />
+                            android:src="@drawable/ic_fav_black" />
 
                     </LinearLayout>
 
@@ -199,8 +191,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="?attr/backgroundColor">
+                        android:background="?attr/backgroundColor"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="200dp"
@@ -212,16 +204,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
-                            android:text="@string/dunnottar_castle"
-                            />
+                            android:text="@string/dunnottar_castle" />
 
                         <ImageView
+                            android:id="@+id/button4"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_fav_black"
-                            android:id="@+id/button4"
-                            />
+                            android:src="@drawable/ic_fav_black" />
 
                     </LinearLayout>
 
@@ -245,8 +235,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="?attr/backgroundColor">
+                        android:background="?attr/backgroundColor"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -258,16 +248,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
-                            android:text="@string/linlithgow_palace"
-                             />
+                            android:text="@string/linlithgow_palace" />
 
                         <ImageView
+                            android:id="@+id/button5"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_fav_red"
-                            android:id="@+id/button5"
-                            />
+                            android:src="@drawable/ic_fav_red" />
 
                     </LinearLayout>
 
@@ -291,8 +279,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="?attr/backgroundColor">
+                        android:background="?attr/backgroundColor"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="200dp"
@@ -304,16 +292,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
-                            android:text="@string/lochness"
-                             />
+                            android:text="@string/lochness" />
 
                         <ImageView
+                            android:id="@+id/button6"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_fav_red"
-                            android:id="@+id/button6"
-                            />
+                            android:src="@drawable/ic_fav_red" />
 
                     </LinearLayout>
 
@@ -337,8 +323,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="?attr/backgroundColor">
+                        android:background="?attr/backgroundColor"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="200dp"
@@ -350,16 +336,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
-                            android:text="@string/luskentyre"
-                             />
+                            android:text="@string/luskentyre" />
 
                         <ImageView
+                            android:id="@+id/button7"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_fav_black"
-                            android:id="@+id/button7"
-                            />
+                            android:src="@drawable/ic_fav_black" />
 
                     </LinearLayout>
 
@@ -383,8 +367,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="?attr/backgroundColor">
+                        android:background="?attr/backgroundColor"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="200dp"
@@ -396,16 +380,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
-                            android:text="@string/prince_alberts_pyramid"
-                             />
+                            android:text="@string/prince_alberts_pyramid" />
 
                         <ImageView
+                            android:id="@+id/button8"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_fav_black"
-                            android:id="@+id/button8"
-                            />
+                            android:src="@drawable/ic_fav_black" />
 
                     </LinearLayout>
 
@@ -429,8 +411,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="?attr/backgroundColor">
+                        android:background="?attr/backgroundColor"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="200dp"
@@ -443,16 +425,14 @@
                             android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:paddingStart="30dp"
-                            android:text="@string/sandwoodbaybeach"
-                             />
+                            android:text="@string/sandwoodbaybeach" />
 
                         <ImageView
+                            android:id="@+id/button9"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_fav_black"
-                            android:id="@+id/button9"
-                            />
+                            android:src="@drawable/ic_fav_black" />
 
                     </LinearLayout>
 
@@ -476,8 +456,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="?attr/backgroundColor">
+                        android:background="?attr/backgroundColor"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="200dp"
@@ -489,16 +469,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
-                            android:text="@string/westsands"
-                             />
+                            android:text="@string/westsands" />
 
                         <ImageView
+                            android:id="@+id/button10"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_fav_black"
-                            android:id="@+id/button10"
-                            />
+                            android:src="@drawable/ic_fav_black" />
 
                     </LinearLayout>
 
@@ -522,8 +500,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="?attr/backgroundColor">
+                        android:background="?attr/backgroundColor"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="200dp"
@@ -535,16 +513,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_gravity="center"
-                            android:text="@string/smoo"
-                             />
+                            android:text="@string/smoo" />
 
                         <ImageView
+                            android:id="@+id/button11"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_fav_black"
-                            android:id="@+id/button11"
-                            />
+                            android:src="@drawable/ic_fav_black" />
 
                     </LinearLayout>
 
@@ -568,8 +544,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="?attr/backgroundColor">
+                        android:background="?attr/backgroundColor"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="200dp"
@@ -582,15 +558,14 @@
                             android:layout_height="40dp"
                             android:layout_gravity="center"
                             android:paddingStart="30dp"
-                            android:text="@string/strathclyde"
-                             />
+                            android:text="@string/strathclyde" />
+
                         <ImageView
+                            android:id="@+id/button12"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_fav_black"
-                            android:id="@+id/button12"
-                            />
+                            android:src="@drawable/ic_fav_black" />
 
                     </LinearLayout>
 

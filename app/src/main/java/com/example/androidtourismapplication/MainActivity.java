@@ -1,115 +1,65 @@
 package com.example.androidtourismapplication;
 
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.view.MenuItem;
-        import android.view.View;
-        import android.view.Window;
-        import android.view.WindowManager;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
-        import android.os.Bundle;
-        import android.view.MenuItem;
-        import android.widget.ArrayAdapter;
-        import android.widget.CompoundButton;
-        import android.widget.GridLayout;
-        import android.widget.Spinner;
-        import android.widget.Switch;
-        import android.widget.TextView;
-        import android.widget.Toast;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
+import android.widget.GridLayout;
+import android.widget.Spinner;
+import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
 
-        import androidx.annotation.NonNull;
-        import androidx.appcompat.app.ActionBar;
-        import androidx.appcompat.app.ActionBarDrawerToggle;
-        import androidx.appcompat.app.AppCompatActivity;
-        import androidx.appcompat.app.AppCompatDelegate;
-        import androidx.appcompat.widget.Toolbar;
-        import androidx.cardview.widget.CardView;
-        import androidx.core.view.GravityCompat;
-        import androidx.drawerlayout.widget.DrawerLayout;
-        import com.google.android.material.navigation.NavigationView;
-        import com.google.firebase.auth.FirebaseAuth;
-        import com.google.firebase.auth.FirebaseUser;
-        import com.google.firebase.database.DataSnapshot;
-        import com.google.firebase.database.DatabaseError;
-        import com.google.firebase.database.DatabaseReference;
-        import com.google.firebase.database.FirebaseDatabase;
-        import com.google.firebase.database.ValueEventListener;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-        import java.lang.reflect.Array;
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.lang.reflect.Array;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
-
-
-
     private DrawerLayout drawer;
     GridLayout gridL;
-//    DatabaseReference reference;
-//    FirebaseAuth auth;
-//    FirebaseUser user;
-//    TextView profiletxt;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
             setTheme(R.style.DarkTheme);
-        }else{
+        } else {
             setTheme(R.style.LightTheme);
         }
 
 
         setContentView(R.layout.activity_main);
 
-//        auth = FirebaseAuth.getInstance();
-//        profiletxt = (TextView)findViewById(R.id.pemail);
-//        user = auth.getCurrentUser();
-//
-//        profiletxt.setText(user.getEmail());
-//
-//
-//        reference = FirebaseDatabase.getInstance().getReference().child(user.getUid());
-//        reference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//
-//                String email = dataSnapshot.child("username").getValue().toString();
-//
-//            }
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//            }
-//            });
-
-
-
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-
-
-
-
-
-
-
-
-
-
-
-
-        gridL = (GridLayout)findViewById(R.id.gridL);
+        gridL = (GridLayout) findViewById(R.id.gridL);
 
         setSingleEvent(gridL);
 
@@ -130,74 +80,60 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    public void logout (MenuItem item){
+    public void logout(MenuItem item) {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(getApplicationContext(), login.class));
         finish();
     }
 
 
+    private void setSingleEvent(GridLayout gridL) {
+        for (int i = 0; i < gridL.getChildCount(); i++) {
 
-
-    private void setSingleEvent(GridLayout gridL){
-        for (int i =0; i<gridL.getChildCount(); i++) {
-
-            CardView cardView = (CardView)gridL.getChildAt(i);
+            CardView cardView = (CardView) gridL.getChildAt(i);
             final int finalI = i;
 
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
-                    if (finalI ==0){
+                    if (finalI == 0) {
                         Intent intent = new Intent(MainActivity.this, wallace.class);
                         startActivity(intent);
-                    }
-                    else  if (finalI ==1){
+                    } else if (finalI == 1) {
                         Intent intent = new Intent(MainActivity.this, ben.class);
                         startActivity(intent);
-                    }
-                    else if (finalI ==2){
+                    } else if (finalI == 2) {
                         Intent intent = new Intent(MainActivity.this, cullen.class);
                         startActivity(intent);
-                    }
-                    else if (finalI ==3){
+                    } else if (finalI == 3) {
                         Intent intent = new Intent(MainActivity.this, dun.class);
                         startActivity(intent);
-                    }
-                    else if (finalI ==4){
+                    } else if (finalI == 4) {
                         Intent intent = new Intent(MainActivity.this, lin.class);
                         startActivity(intent);
-                    }
-                    else if (finalI ==5){
+                    } else if (finalI == 5) {
                         Intent intent = new Intent(MainActivity.this, loch.class);
                         startActivity(intent);
-                    }
-                    else if (finalI ==6){
+                    } else if (finalI == 6) {
                         Intent intent = new Intent(MainActivity.this, lusk.class);
                         startActivity(intent);
-                    }
-                    else if (finalI ==7){
+                    } else if (finalI == 7) {
                         Intent intent = new Intent(MainActivity.this, pap.class);
                         startActivity(intent);
-                    }
-                    else if (finalI ==8){
+                    } else if (finalI == 8) {
                         Intent intent = new Intent(MainActivity.this, sbb.class);
                         startActivity(intent);
-                    }
-                    else if (finalI ==9){
+                    } else if (finalI == 9) {
                         Intent intent = new Intent(MainActivity.this, wsb.class);
                         startActivity(intent);
-                    }
-                    else if (finalI ==10){
+                    } else if (finalI == 10) {
                         Intent intent = new Intent(MainActivity.this, smoo.class);
                         startActivity(intent);
-                    }
-                    else if (finalI ==11){
+                    } else if (finalI == 11) {
                         Intent intent = new Intent(MainActivity.this, strath.class);
                         startActivity(intent);
-                    }
-                    else {
+                    } else {
                         Toast.makeText(MainActivity.this, "please set an activity for this card", Toast.LENGTH_LONG).show();
                     }
                 }
@@ -205,8 +141,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         }
     }
-
-
 
 
     @Override
@@ -223,7 +157,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent intentF = new Intent(this, FavouritesFragment.class);
                 this.startActivity(intentF);
                 break;
-
 
 
             case R.id.nav_map:

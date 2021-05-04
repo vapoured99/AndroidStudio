@@ -24,6 +24,7 @@
         android:drawablePadding="10dp"
         android:inputType="text"
         android:text="Email"
+        android:textColor="#add8e6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -36,13 +37,13 @@
         android:layout_marginEnd="80dp"
         android:autofillHints="Password"
         android:background="#11000000"
+        android:drawablePadding="10dp"
         android:drawableStart="@drawable/ic_stat_password"
         android:ems="10"
-        android:hint="@string/password"
-        android:drawablePadding="10dp"
-        android:inputType="textPassword"
-        android:text="@string/password"
+        android:textColorHint="#add8e6"
         android:textSize="22sp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
@@ -54,13 +55,13 @@
         android:layout_marginEnd="80dp"
         android:autofillHints="Confirm Password"
         android:background="#11000000"
+        android:drawablePadding="10dp"
         android:drawableStart="@drawable/ic_stat_password"
         android:ems="10"
+        android:textColorHint="#add8e6"
         android:textSize="22sp"
-        android:hint="@string/password"
+        android:hint="@string/confirm"
         android:inputType="textPassword"
-        android:drawablePadding="10dp"
-        android:text="@string/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 

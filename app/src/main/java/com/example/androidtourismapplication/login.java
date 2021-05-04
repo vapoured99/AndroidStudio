@@ -28,7 +28,6 @@ public class login extends AppCompatActivity {
     EditText mEmail, mPassword;
     Button mbutton;
     FirebaseAuth fAuth;
-    ProgressBar progressBar;
     TextView textView;
     TextView textView2;
     TextView forgotTextLink;
@@ -43,7 +42,6 @@ public class login extends AppCompatActivity {
         mEmail = findViewById(R.id.email);
         mPassword = findViewById(R.id.password);
         fAuth = FirebaseAuth.getInstance();
-//        progressBar = findViewById(R.id.progressBar);
         mbutton = (Button) findViewById(R.id.button);
         forgotTextLink = (TextView) findViewById(R.id.textView3);
 
@@ -90,8 +88,6 @@ public class login extends AppCompatActivity {
                     mPassword.setError(("Password must contain more than 6 characters."));
                     return;
                 }
-
-//                progressBar.setVisibility(View.VISIBLE);
 
                 //authenticate user
                 fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
